@@ -1,0 +1,15 @@
+    1  password
+    2  passwd
+    3  wget github.com
+    4  ls
+    5  git --version
+    6  mkdir cs131
+    7  cd cs141
+    8  ls
+    9  cd cs131
+   10  git init
+   11  git --help
+   12  mkdir ws1
+   13  ls
+   14  cd ws1
+   15  history > cmds.log
