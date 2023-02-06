@@ -1,0 +1,7 @@
+The following number represents the total not "verified" lines from the file
+cmd: grep -v "verified" amazon...tsv | wc -l > counts.txt
+3104082
+
+The following number represents the total "verified" lines from the file
+cmd: grep "verified" amazon...tsv | wc -l >> counts.txt
+1439

@@ -1,0 +1,161 @@
+    1  password
+    2  passwd
+    3  wget github.com
+    4  ls
+    5  git --version
+    6  mkdir cs131
+    7  cd cs141
+    8  ls
+    9  cd cs131
+   10  git init
+   11  git --help
+   12  mkdir ws1
+   13  ls
+   14  cd ws1
+   15  history > cmds.log
+   16  ls
+   17  cat cmds.log
+   18  cd ..
+   19  git remote add origin https://github.com/PeizuLi5/cs131.git
+   20  git push -u origin master
+   21  git add .
+   22  git commit -m "first commit"
+   23  cd ..
+   24  ls
+   25  git status
+   26  cd cs131
+   27  git status
+   28  git commit -m "first commit"
+   29  git config --global user.name "PeizuLi5"
+   30  git config --global user.email "peizu.li@sjsu.edu"
+   31  git commit -m 
+   32  git commit -m "first commit"
+   33  git push -u origin master
+   34  git status
+   35  cd ..
+   36  rm cs131
+   37  rmdir cs131
+   38  cd cs131
+   39  ls
+   40  cd ws1
+   41  rm cmds.log
+   42  cd ..
+   43  rmdir ws1
+   44  cd ..
+   45  rmdir cs131
+   46  cd cs131
+   47  ls
+   48  git rm -fr .git
+   49  git staus
+   50  git status
+   51  git restore ws1/cmds.log
+   52  ls
+   53  git status
+   54  git add .
+   55  git commit -m "commit"
+   56  git push -u origin master
+   57  git branch -M main
+   58  push -u origin main
+   59  git push -u origin main
+   60  ls
+   61  cd 131
+   62  cd cs131
+   63  git remote -v
+   64  git remote rm
+   65  git remote rm origin
+   66  git remote -v
+   67  git status
+   68  git init
+   69  git remote add origin git@github.com:PeizuLi5/cs131.git
+   70  git remote -v
+   71  git add
+   72  git add .
+   73  git commit -m "commite
+   74  "
+   75  git push -u origin master
+   76  ls
+   77  cd ws
+   78  cd ws1
+   79  ls
+   80  cd ..
+   81  rmdirgit rm -r --cached cs131
+   82  git rm -r --cached cs131
+   83  cd cs131
+   84  ls
+   85  git status
+   86  ls
+   87  cd cs131
+   88  ls
+   89  git remote
+   90  git add .
+   91  git push
+   92  git push origin
+   93  git push --set-upstream origin main
+   94  git remote rm origin
+   95  git remote
+   96  git remote add origin https://github.com/PeizuLi5/cs131.git
+   97  git branch -M main
+   98  git push -u origin main
+   99  ls
+  100  cd cs131
+  101  ls
+  102  git remote
+  103  git remote rm
+  104  git remote rm origin
+  105  git remote add origin https://github.com/PeizuLi5/cs131.git
+  106  git push -u origin main
+  107  cd cs131/
+  108  git status
+  109  cd ws1
+  110  cat cmds.log 
+  111  ls -l file
+  112  ls -l cmds.log 
+  113  cd ~
+  114  pwd
+  115  ls
+  116  cat index.html 
+  117  ls -l index.html 
+  118  head index.html 
+  119  ls -l index.html 
+  120  man
+  121  grep
+  122  grep -help
+  123  grep --help
+  124  man ls
+  125  man grep
+  126  ls -latr
+  127  ls -lat
+  128  ls
+  129  ls -l
+  130  ls -a
+  131  ls -t
+  132  ls -l
+  133  ls -r
+  134  ls -la
+  135  ls -lt
+  136  ls -lat
+  137  man grep
+  138  grep i
+  139  find ./ -type f -name "?.txt"
+  140  nano
+  141  ls
+  142  wget https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Books_v1_02.tsv.gz
+  143  ls
+  144  rm nano.save
+  145  rm nano.save.1 
+  146  ls
+  147  gunzip amazon_reviews_us_Books_v1_02.tsv.gz 
+  148  ls
+  149  cd 131
+  150  ls
+  151  cd cs131
+  152  ls
+  153  cd ws2
+  154  ls
+  155  cat counts.txt
+  156  vim counts.txt 
+  157  cat counts.txt
+  158  history < cmds.log
+  159  vim counts.txt 
+  160  cat counts.txt
+  161  history > cmds.log
