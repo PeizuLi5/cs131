@@ -1,0 +1,10 @@
+Correct anwer for ws2
+grep -E $'(.*\t){11}Y\t' amazon_...tsv | wc -l > txt
+229346
+
+grep -Ev $'(.*\t){11}Y\t' amazon_...tsv | wc -l > txt
+2876175
+
+(.*\t) read tabs
+{11} after 11 times
+Y if it is 'Y'

@@ -1,0 +1,50 @@
+  269  cut --help
+  270  cut -d $"\t" -f 2 amazon_reviews_us_Books_v1_02.tsv 
+  271  cut -d$"\t" -f 2 amazon_reviews_us_Books_v1_02.tsv 
+  272  cut -f 2
+  273  cut -f 2 amazon_reviews_us_Books_v1_02.tsv 
+  274  cut -f 2 amazon_reviews_us_Books_v1_02.tsv | uniq -c | sort -r
+  275  cut -f 2 amazon_reviews_us_Books_v1_02.tsv | uniq -c | sort -nr
+  276  cut -f 2 -d, amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c
+  277  cut -f 2 amazon_reviews_us_Books_v1_02.tsv | awk '{print $1}' | sort | uniq -c
+  278  cut -f 2 amazon_reviews_us_Books_v1_02.tsv | awk '{print $1}' | sort -r | uniq -c
+  279  cut -f 2 amazon_reviews_us_Books_v1_02.tsv | awk '{print $1}' | uniq -c | sort
+  280  shopt -s cdspell
+  281  cd wc131
+  282  ls
+  283  cut -f 2 amazon_reviews_us_Books_v1_02.tsv | awk '{print $1}' | uniq -c | sort -n
+  284  ls
+  285  cut -f 2 amazon_reviews_us_Books_v1_02.tsv | awk '{print $1}' | uniq -c | sort -rn
+  286  cut -f 2 amazon_reviews_us_Books_v1_02.tsv > cut.txt
+  287  ls
+  288  less cut.txt
+  289  sort --help
+  290  sort -r | uniq -c
+  291  sort -r cut.txt | uniq -c
+  292* 
+  293  sort -nr cut.txt | uniq -c
+  294  sort -n cut.txt | uniq -c
+  295  sort cut.txt | uniq -c
+  296  sort cut.txt | uniq -c | sort -nr
+  297  sort cut.txt | uniq -c | sort -nr | head -n 3
+  298  cut -f 2 amazon_reviews_us_Books_v1_02.tsv | awk '{print $1}' | sort | uniq -c | sort -nr | head -n 3
+  299  cut -f 3 amazon_reviews_us_Books_v1_02.tsv | awk '{print $1}' | sort | uniq -c | sort -nr | head -n 3
+  300  less amazon_reviews_us_Books_v1_02.tsv 
+  301  cut -f 4 amazon_reviews_us_Books_v1_02.tsv | awk '{print $1}' | sort | uniq -c | sort -nr | head -n 3
+  302  rm cut.txt 
+  303  ls
+  304  cut -f 2 amazon_reviews_us_Books_v1_02.tsv | awk '{print $1}' | sort | uniq -c | sort -nr | head -n 3 > ws3.txt
+  305  cut -f 4 amazon_reviews_us_Books_v1_02.tsv | awk '{print $1}' | sort | uniq -c | sort -nr | head -n 3 >> ws3.txt
+  306  cat ws3.txt 
+  307  vim ws3.txt 
+  308  cat ws3.txt 
+  309  ls cs131
+  310  mkdir cs131/ws3
+  311  ls cs131
+  312  mv ws3.txt cs131/ws3
+  313  cd cs131/ws3
+  314  ls
+  315  history | head -n 50 > cmds.log
+  316  ls
+  317  cat cmds.log 
+  318  history | tail -n 50 > cmds.log

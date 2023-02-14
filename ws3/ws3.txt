@@ -1,0 +1,15 @@
+The following three lines describe the top three customer IDs that have the most reviews.
+The right number indicates how many reviews this customer authored.
+The left number is the customer ID.
+command used: cut -f 2 amazon_reviews_us_Books_v1_02.tsv | awk '{print $1}' | sort | uniq -c | sort -nr | head -n 3 > ws3.txt 
+  21922 50122160
+   9964 50732546
+   2664 52615377
+
+The following three lines describe the top three product IDs that have the most reviews.
+The right number indicates how many reviews those products have.
+The left number is the product ID.
+command used: cut -f 4 amazon_reviews_us_Books_v1_02.tsv | awk '{print $1}' | sort | uniq -c | sort -nr | head -n 3 >> ws3.txt
+   4625 043935806X
+   3739 0439139597
+   2666 0525947647
