@@ -1,0 +1,26 @@
+  418  script ws4.txt
+  419  vim ~/.bashrc
+  420  source ~/.bashrc
+  421  l
+  422  w
+  423  ls
+  424  mkdir cs131/ws4
+  425  mkdir cs131/ws4/CUSTOMERS
+  427  mkdir cs131/ws4/PRODUCTS 
+  448  cut -f 2 amazon_reviews_us_Books_v1_02.tsv | awk '{print $1}' | sort | uniq -c | sort -nr | head -n 20
+  453  grep -E $'(.*\t){1}51147790\t' amazon_reviews_us_Books_v1_02.tsv | cut -f 9 > cs131/ws4/CUSTOMERS/51147790.txt
+  454  cat cs131/ws4/CUSTOMERS/51147790.txt 
+  456  cut -f 4 amazon_reviews_us_Books_v1_02.tsv | awk '{print $1}' | sort | uniq -c | sort -nr | head -n 20
+  461  grep -E $'(.*\t){3}0679781587\t' amazon_reviews_us_Books_v1_02.tsv | cut -f 9 > cs131/ws4/PRODUCTS/0679781587.txt
+  462  cd cs131/ws4/CUSTOMERS/
+  463  ls
+  464  vim mean.sh
+  465  cat mean.sh
+  466  bash mean.sh
+  467  cd ../PRODUCTS/
+  468  vim mean.sh
+  469  bash mean.sh
+  470  cd ../../
+  471  ls
+  472  cd ws4
+  473  history > cmds.log
