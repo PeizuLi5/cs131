@@ -1,0 +1,98 @@
+There are history commands lost due to the VM connection issues, so the history file only contains commands start from question 6.
+a1.txt also contains commands that are used for question 1-5, so question 1-5 in cmds.log will be the same as a1.txt
+
+1.
+mkdir cs131/a1
+cd cs131/a1
+
+2.
+echo ~
+echo $HOME
+pwd
+
+3.
+id
+id -u
+
+4.
+chmod 664 temp/
+ls -l
+cd temp
+ls -l temp
+touch temp/temp.txt
+mkdir temp/temp
+vim temp/temp.txt
+
+5. 
+mkdir temp2
+mv temp2 temp3
+ls
+touch temp3/a.txt
+touch temp3/b.txt
+cp temp3 temp4
+cp -r temp3 temp4
+ls temp3
+ls temp4
+
+6.
+  496  lscpu
+  497  lsmem
+  511  cd /proc
+  512  ls
+  518  ls /proc/
+  520  cat /proc/cpuinfo
+  523  ls /proc | grep 'cpu'
+  524  ls /proc | grep 'mem'
+
+7. 
+  526  head /proc/meminfo 
+
+8.
+  525  haed /proc/cpuinfo
+  527  tail /proc/cpuinfo 
+
+9.
+  528  cp /home/test/A1/downloaded_hashtags_extend.csv .
+  529  ls
+  530  less downloaded_hashtags_extend.csv 
+  531  ls -la
+  532  ls -l downloaded_hashtags_extend.csv 
+  533  ls -h -l downloaded_hashtags_extend.csv 
+  534  wc -l downloaded_hashtags_extend.csv 
+
+10.
+  540  grep -iF "great" downloaded_hashtags_extend.csv
+  541  grep -iF "great" downloaded_hashtags_extend.csv | wc -l
+
+11.
+  542  file downloaded_hashtags_extend.csv 
+  543  file -i downloaded_hashtags_extend.csv 
+
+12.
+  547  iconv -l downloaded_hashtags_extend.csv 
+  553  iconv -f UTF-8 -t ASCII//TRANSLIT downloaded_hashtags_extend.csv 
+  555  iconv -l downloaded_hashtags_extend.csv 
+  556  iconv -f UTF-8 -t ASCII//TRANSLIT -o downloaded_hashtags_extend.csv downloaded_hashtags_extend.csv 
+  557  iconv -l downloaded_hashtags_extend.csv 
+
+13.
+  589  wc -l downloaded_hashtags_extend.csv 
+  590  less downloaded_hashtags_extend.csv 
+  591  cut -d "," -f 1 downloaded_hashtags_extend.csv | uniq -c
+  592  cut -d "," -f 1 downloaded_hashtags_extend.csv | uniq -c | wc -l
+  593  cut -d "," -f 1 downloaded_hashtags_extend.csv | grep -E '[0-9]+' |  uniq -c | wc -l
+  594  cut -d "," -f 1 downloaded_hashtags_extend.csv | grep -E '[0-9]+' | uniq -c | wc -l
+  595  less downloaded_hashtags_extend.csv 
+  596  cut -d "," -f 4 downloaded_hashtags_extend.csv | grep -E '[0-9]+' | uniq -c | wc -l
+  597  cut -d "," -f 4 downloaded_hashtags_extend.csv | uniq -c | wc -l
+  598  cut -d "," -f 4 downloaded_hashtags_extend.csv | uniq -c |
+  599  cut -d "," -f 4 downloaded_hashtags_extend.csv | uniq -c
+  600  cut -d "," -f 4 downloaded_hashtags_extend.csv | grep -E '[0-9]+' | uniq -c | wc -l
+  601  less downloaded_hashtags_extend.csv 
+  602  cut -d "," -f 2 downloaded_hashtags_extend.csv | grep -v "hashtags" | sort | uniq -c | wc -l
+  603  cut -d "," -f 2 downloaded_hashtags_extend.csv | sort | uniq -c | wc -l
+  604  cut -d "," -f 2 downloaded_hashtags_extend.csv | uniq -c | wc -l
+  605  cut -d "," -f 2 downloaded_hashtags_extend.csv | sort | uniq -c | sort -n | head -20
+  606  cut -d "," -f 2 downloaded_hashtags_extend.csv | sort | uniq -c | sort | tail -20
+  607  cut -d "," -f 2 downloaded_hashtags_extend.csv | sort | uniq -c | sort -nr | head -20
+  608  cut -d "," -f 2 downloaded_hashtags_extend.csv | grep -v "hashtags" | sort | uniq -c | wc -l 
