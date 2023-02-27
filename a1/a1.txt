@@ -1,0 +1,113 @@
+1. No Outputs
+
+2. [peizu23sp@sjsu a1]$ echo ~
+/mnt/scratch/peizu23sp
+[peizu23sp@sjsu a1]$ echo $HOME
+/mnt/scratch/peizu23sp
+[peizu23sp@sjsu a1]$ pwd (only valid when your current location is on the home directory)
+/mnt/scratch/peizu23sp
+
+3. [peizu23sp@sjsu a1]$ id
+uid=1048(peizu23sp) gid=1050(peizu23sp) groups=1050(peizu23sp)
+
+4. We cannot cd into temp, but we can use ls command in temp, but we cannot create files/directories in temp
+[peizu23sp@sjsu a1]$ chmod 664 temp/
+[peizu23sp@sjsu a1]$ ls -l
+total 4
+drw-rw-r-- 2 peizu23sp peizu23sp 4096 Feb 26 23:07 temp
+[peizu23sp@sjsu a1]$ cd temp
+-bash: cd: temp: Permission denied
+[peizu23sp@sjsu a1]$ ls -l temp
+total 0
+[peizu23sp@sjsu a1]$ touch temp/temp.txt
+touch: cannot touch 'temp/temp.txt': Permission denied
+[peizu23sp@sjsu a1]$ mkdir temp/temp
+mkdir: cannot create directory ‘temp/temp’: Permission denied
+
+5. Yes, we can "mv" temp2 to temp3, it means change the directory name "temp2" to "temp3". We cannot just use "cp" command for directory, but we can use "cp -r" to "cp" entire directory.
+[peizu23sp@sjsu a1]$ mkdir temp2
+[peizu23sp@sjsu a1]$ mv temp2 temp3
+[peizu23sp@sjsu a1]$ ls
+temp  temp3
+[peizu23sp@sjsu a1]$ touch temp3/a.txt
+[peizu23sp@sjsu a1]$ touch temp3/b.txt
+[peizu23sp@sjsu a1]$ cp temp3 temp4
+cp: -r not specified; omitting directory 'temp3'
+[peizu23sp@sjsu a1]$ cp -r temp3 temp4
+[peizu23sp@sjsu a1]$ ls temp3
+a.txt  b.txt
+[peizu23sp@sjsu a1]$ ls temp4
+a.txt  b.txt
+
+6. The file that contains mem information is "meminfo" file. The file that contains cpu information is the "cpuinfo" file.
+[peizu23sp@sjsu a1]$ ls /proc | grep 'cpu'
+cpuinfo
+[peizu23sp@sjsu a1]$ ls /proc | grep 'mem'
+iomem
+meminfo
+
+7. The total memory on my server is 73080640 kB.
+[peizu23sp@sjsu a1]$ head /proc/meminfo 
+MemTotal:       73080640 kB
+MemFree:        12958400 kB
+MemAvailable:   19941312 kB
+Buffers:          314304 kB
+Cached:         11086336 kB
+SwapCached:       105280 kB
+Active:          7587840 kB
+Inactive:        4540800 kB
+Active(anon):    2582080 kB 
+Inactive(anon):  1831808 kB
+
+8. The total number of processors on my server is 255. The architecture name is POWER8. The processor speed is 3.525 GHz.
+[peizu23sp@sjsu a1]$ tail /proc/cpuinfo 
+processor	: 255
+cpu		: POWER8 (architected), altivec supported
+clock		: 3525.000000MHz
+revision	: 2.1 (pvr 004b 0201)
+
+timebase	: 512000000
+platform	: pSeries
+model		: IBM,8286-42A
+machine		: CHRP IBM,8286-42A
+MMU		: Hash
+
+9. The size of the file is about 0.07GB. The total number of lines in the file is 110350
+[peizu23sp@sjsu a1]$ cp /home/test/A1/downloaded_hashtags_extend.csv .
+[peizu23sp@sjsu a1]$ ls -h -l downloaded_hashtags_extend.csv 
+-rw-r--r-- 1 peizu23sp peizu23sp 7.5M Feb 27 00:11 downloaded_hashtags_extend.csv
+[peizu23sp@sjsu a1]$ wc -l downloaded_hashtags_extend.csv 
+110350 downloaded_hashtags_extend.csv
+
+10. There are 57 hashtags contains the word "great"
+[peizu23sp@sjsu a1]$ grep -iF "great" downloaded_hashtags_extend.csv | wc -l
+57
+
+11. The character-encoding of this dataset is UTF-8
+[peizu23sp@sjsu a1]$ file -i downloaded_hashtags_extend.csv 
+downloaded_hashtags_extend.csv: text/plain; charset=utf-8
+
+12. [peizu23sp@sjsu a1]$ iconv -f UTF-8 -t ASCII downloaded_hashtags_extend.csv | head
+author,hashtags,date,id
+308045021,awesomepeopleontwitter,2022-04-30 23:18:45+00:00,1520543208614334465
+308045021,journalism,2022-04-30 20:40:18+00:00,1520503332246376448
+308045021,npr,2022-04-30 20:40:18+00:00,1520503332246376448
+308045021,lc,2022-04-29 22:28:54+00:00,1520168272896962562
+308045021,exercise,2022-04-29 22:28:54+00:00,1520168272896962562
+308045021,buddhism,2022-04-29 14:52:29+00:00,1520053412968210432
+308045021,buddhism,2022-04-29 14:16:51+00:00,1520044444204032001
+308045021,obgyntwitter,2022-04-29 02:47:33+00:00,1519870977311715328
+308045021,busymom,2022-04-28 21:20:34+00:00,1519788687957049344
+
+13. There are 361 unique users in the hashtag file. There are 66177 unique tweets in the file. There are 20257 unique hashtags in the file, and there are less unique hashtags than unique tweets.
+[peizu23sp@sjsu a1]$ head -3 downloaded_hashtags_extend.csv 
+author,hashtags,date,id
+308045021,awesomepeopleontwitter,2022-04-30 23:18:45+00:00,1520543208614334465
+308045021,journalism,2022-04-30 20:40:18+00:00,1520503332246376448
+[peizu23sp@sjsu a1]$ cut -d "," -f 1 downloaded_hashtags_extend.csv | grep -E '[0-9]+' | uniq -c | wc -l
+361
+[peizu23sp@sjsu a1]$ cut -d "," -f 4 downloaded_hashtags_extend.csv | grep -E '[0-9]+' | uniq -c | wc -l
+66177
+[peizu23sp@sjsu a1]$ cut -d "," -f 2 downloaded_hashtags_extend.csv | grep -v "hashtags" | sort | uniq -c | wc -l
+20257
+ 
