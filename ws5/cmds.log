@@ -1,0 +1,5 @@
+Two commands that are used for ws5. The first command finds out the top 200 most reviews customers and stored the info into top_cus.txt. The second command use for loop to find out all the reviews for each customers, and put the review title, body and date into the file names ID.txt.
+
+  729  cut -f 2 amazon_reviews_us_Books_v1_02.tsv | awk '{print $1}' | sort | uniq -c | sort -nr | cut -b 9- | head -n 200 > cs131/ws5/CUSTOMERS/top_cus.txt
+  830  for i in `cat cs131/ws5/CUSTOMERS/top_cus.txt` ; do (grep -E $i amazon_reviews_us_Books_v1_02.tsv | cut -f 13,14,15 > cs131/ws5/CUSTOMERS/$i.txt) ; done
+ 
