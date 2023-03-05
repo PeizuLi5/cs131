@@ -59,7 +59,7 @@ Inactive:        4540800 kB
 Active(anon):    2582080 kB 
 Inactive(anon):  1831808 kB
 
-8. The total number of processors on my server is 255. The architecture name is POWER8. The processor speed is 3.525 GHz.
+8. The total number of processors on my server is 256. The architecture name is POWER8. The processor speed is 3.525 GHz.
 [peizu23sp@sjsu a1]$ tail /proc/cpuinfo 
 processor	: 255
 cpu		: POWER8 (architected), altivec supported
