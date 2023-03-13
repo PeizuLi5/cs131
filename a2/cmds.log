@@ -1,0 +1,18 @@
+1.
+ 1000  grep -E $'(.*\t){4}.*replied_to.*\t' downloaded_tweets_extend_original_nolf2.tsv | wc -l
+ 1001  grep -E $'(.*\t){4}.*replied_to.*\t' downloaded_tweets_extend_original_nolf2.tsv | head -3
+ 1005  grep -E $'(.*\t){4}.*replied_to.*\t' downloaded_tweets_extend_original_nolf2.tsv | cut -f 2 | sort | uniq -c | sort -nr | head -10
+ 1006  grep -E $'(.*\t){4}.*replied_to.*\t' downloaded_tweets_extend_original_nolf2.tsv | cut -f 2 | sort | uniq -c | sort -nr | wc -l
+
+2.
+ 1007  grep -E $'(.*\t){4}.*replied_to.*\t' downloaded_tweets_extend_original_nolf2.tsv | cut -f 6 | sort | uniq -c | sort -nr | head -10
+ 
+3. 
+ 1019   grep -E $'(.*\t){4}.*retweeted.*\t' downloaded_tweets_extend_original_nolf2.tsv | cut -f 2 | sort | uniq -c | sort -nr | head -10
+ 1020   grep -E $'(.*\t){4}.*retweeted.*\t' downloaded_tweets_extend_nolf2.tsv | cut -f 2 | sort | uniq -c | sort -nr | head -10
+
+4.
+ 1022  cut -f 4 downloaded_tweets_extend_nolf2.tsv | sort | uniq -c | sort -nr | head -30
+ 1023* cut -f 4 downloaded_tweets_extend_nolf2.tsv | sort | uniq -c | sort -nr | head -30
+ 1025  cut -f 4 downloaded_tweets_extend_nolf2.tsv | grep -v ^$ | sort | uniq -c | sort -nr | head -30
+ 
