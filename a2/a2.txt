@@ -1,0 +1,67 @@
+1.  [peizu23sp@sjsu a2]$ grep -E $'(.*\t){4}.*replied_to.*\t' downloaded_tweets_extend_original_nolf2.tsv | cut -f 2 | sort | uniq -c | sort -nr | head -10
+    106 380648579
+    104 18831926
+     83 16050065
+     45 1240682348120866816
+     35 1094971056358637568
+     34 140496030
+     34 1387010761994682371
+     32 172323296
+     27 117810351
+     19 1573800344
+
+2. [peizu23sp@sjsu a2]$ grep -E $'(.*\t){4}.*replied_to.*\t' downloaded_tweets_extend_original_nolf2.tsv | cut -f 6 | sort | uniq -c | sort -nr | head -10
+    112 18831926
+    107 380648579
+     83 16050065
+     45 3453306553
+     37 1094971056358637568
+     34 140496030
+     32 172323296
+     30 29447428
+     30 1240682348120866816
+     29 117810351
+
+3. [peizu23sp@sjsu a2]$  grep -E $'(.*\t){4}.*retweeted.*\t' downloaded_tweets_extend_nolf2.tsv | cut -f 2 | sort | uniq -c | sort -nr | head -10
+   2065 45379403
+   1678 77726331
+   1641 870244616003403781
+   1582 1028022611324747776
+   1312 711608180535640064
+   1281 139109800
+   1234 177400353
+   1216 832019161454817280
+   1159 29447428
+   1139 1060440219097423872
+
+4. [peizu23sp@sjsu a2]$ cut -f 4 downloaded_tweets_extend_nolf2.tsv | grep -v ^$ | sort | uniq -c | sort -nr | head -30
+   1266 Ukraine
+    945 COVID19
+    870 LongCovid
+    833 "FBPE,FollowBackFriday"
+    320 Russia
+    305 BREAKING
+    257 PMQs
+    208 auspol
+    181 StandWithUkraine
+    177 AmiesMovieRating
+    176 Omicron
+    168 Mariupol
+    136 Kyiv
+    135 BA2
+    122 "Russia,Ukraine"
+    120 COVID
+    118 Bales2022FilmChallenge
+    111 Putin
+    108 COVIDisAirborne
+    107 "PutinHitler,StandWithUkraine,PutinHitler,PutinWarCriminal,StopPutinNOW,RussiaSanctions,BoycottRussia"
+    107 ClimateCrisis
+    106 BoycottATP
+    105 Russian
+     98 "cathrynhartt,harttandsoul,actor,actorslife"
+     97 Covid19
+     93 Partygate
+     87 TikTok
+     85 longcovid
+     80 Ottawa 
+     79 Brexit

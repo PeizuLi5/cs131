@@ -3,3 +3,4 @@ Two commands that are used for ws5. The first command finds out the top 200 most
   729  cut -f 2 amazon_reviews_us_Books_v1_02.tsv | awk '{print $1}' | sort | uniq -c | sort -nr | cut -b 9- | head -n 200 > cs131/ws5/CUSTOMERS/top_cus.txt
   830  for i in `cat cs131/ws5/CUSTOMERS/top_cus.txt` ; do (grep -E $i amazon_reviews_us_Books_v1_02.tsv | cut -f 13,14,15 > cs131/ws5/CUSTOMERS/$i.txt) ; done
  
+ prof cmd: for id in `cat file.txt` ; do grep -En "^.*\s${id}\s" amazon...tsv > ${id}.txt ; done
