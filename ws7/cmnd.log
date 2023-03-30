@@ -1,0 +1,10 @@
+1,2:
+  973  awk -F '\t' -f ws7_1 ../amazon_reviews_us_Books_v1_02.tsv > verified.txt
+  974  head -20 verified.txt > verified_head20.txt
+
+3:
+ 1025  awk -F '\t' -f ws7_2 verified.txt | head -10 > top10.txt
+
+ (compare the answer with cut to check correctness)
+ 1027  cat top10.txt 
+ 1028  cut -f 13 verified.txt | sort | uniq -c | sort -rn | head -10

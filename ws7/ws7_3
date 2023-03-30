@@ -1,0 +1,7 @@
+{
+  count[$13]++
+}
+END {
+  for(word in count)
+    print "    ", count[word], substr(word, index(word, "\t")+1) | "sort -nr"
+}
