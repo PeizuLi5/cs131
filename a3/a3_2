@@ -1,0 +1,8 @@
+{
+  count[$1]++
+}
+END {
+  for(user in count)
+    if(count[user] >= 3)
+      print count[user], user | "sort -nr"
+}
