@@ -34,7 +34,9 @@
   h4.svg:
     gnuplot> set term svg
     gnuplot> set output "h4.svg"  
-    gnuplot> set boxwidth 1
+    gnuplot> set boxwidth 3.6
+    gnuplot> set xlabel "number of replies"
+    gnuplot> set ylabel "number of users"
     gnuplot> set style fill solid
     gnuplot> set xtics 1
     gnuplot> bin_width = 4
