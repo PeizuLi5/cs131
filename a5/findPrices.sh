@@ -18,3 +18,8 @@ do
 		awk '{ sum += $1 } END { if (NR > 0) printf("%.2f\n", sum / NR) }' $i >> ./avg_price.dat
 	fi
 done
+
+for i in other_price
+do
+	awk '{count[$1]++} END {for(price in count) print price, count[price] | "sort -nr"}' $i > prices.dat
+done
