@@ -1,0 +1,7 @@
+2023-04-26 21:35:18,728 - INFO - Task: evaluate
+2023-04-26 21:35:18,728 - INFO - Training on train, Test on test, feature set ['clean_data.csv'] ...
+2023-04-26 21:35:18,765 - INFO - Featurizing and training new DecisionTreeClassifier model
+2023-04-26 21:35:18,766 - WARNING - Training data will be shuffled to randomize grid search folds.  Shuffling may yield different results compared to scikit-learn.
+2023-04-26 21:35:19,943 - INFO - Best accuracy grid search score: 0.762
+2023-04-26 21:35:19,946 - INFO - Hyperparameters: ccp_alpha: 0.0, class_weight: None, criterion: gini, max_depth: None, max_features: None, max_leaf_nodes: None, min_impurity_decrease: 0.0, min_samples_leaf: 1, min_samples_split: 2, min_weight_fraction_leaf: 0.0, random_state: 123456789, splitter: best
+2023-04-26 21:35:19,946 - INFO - Evaluating predictions

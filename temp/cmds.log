@@ -1,0 +1,252 @@
+    1  pip --version
+    2  sudo apt install python3-pip
+    3  pip --version
+    4  ls
+    5  pip install skll
+    6  ls
+    7  ls -la
+    8  echo $PATH
+    9  wget https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv
+   10  wgets https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv
+   11  curl https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv
+   12  ls
+   13  curl https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv > wine.csv
+   14  ls
+   15  pip list | grep skll
+   16  ls | grep wine
+   17  mv wine.csv winequality-red.csv
+   18  ls
+   19  wc -l winequality-red.csv 
+   20  sudo yum install wget
+   21  sudo apt install wget
+   22  wgets https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv
+   23  echo $PATH
+   24  sudo apt-get install wget
+   25  wget -V
+   26  wgets https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv
+   27  wget https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csvcur
+   28  ls
+   29  less winequality-red.csv 
+   30  skll --version
+   31  skll
+   32  ls
+   33  ls /bin
+   34  vim a4
+   35  ls
+   36  mkdir wine
+   37  vim a4
+   38  mkdir wine/train
+   39  mkdir wine/test
+   40  ls
+   41  ls wine
+   42  vim a4 
+   43  cat a4
+   44  ls
+   45  ls -l
+   46  chmod u+rwx a4
+   47  ls -l
+   48  ./a4
+   49  vim a4
+   50  ./a4
+   51  wc -l wine/train/data.csv 
+   52  wc -l wine/test/data.csv 
+   53  vim a4
+   54  cd wine
+   55  ls
+   56  user
+   57  id
+   58  less train/data.csv 
+   59  vim bin.awk
+   60  awk -f bin.awk train/data.csv 
+   61  awk -i -f bin.awk train/data.csv 
+   62  man awk
+   63  awk -f bin.awk train/data.csvclear 
+   64  clear
+   65  awk -f bin.awk train/data.csv > train/clean_data.csv
+   66  awk -f bin.awk test/data.csv > test/clean_data.csv
+   67  ls
+   68  ls test
+   69  cat test/clean_data.csv 
+   70  :wq
+   71  clear
+   72  cd ..
+   73  mv wine/bin.awk 
+   74  mv wine/bin.awk .
+   75  ls
+   76  vim a4
+   77  ls
+   78  ./a4
+   79  ls wine/test
+   80  less wine/test/clean_data.csv 
+   81  less wine/train/clean_data.csv 
+   82  less wine/train/data.csv 
+   83  less wine/test/data.csv 
+   84  less wine/test/clean_data.csv 
+   85  vim a4
+   86  vim set number
+   87  ls
+   88  vim ~/.vimrc
+   89  vim a4
+   90  vim ~/.vimrc
+   91  vim a4
+   92  vim ~/.vimrc
+   93  vim a4
+   94  pip list
+   95  cd wine
+   96  ls
+   97  vim classicfy.conf
+   98  mv classicfy.conf classify.cfg
+   99  ;s
+  100  ls
+  101  mkdir output
+  102  mv classicfy.conf classify.cfg
+  103  vim classify.cfg 
+  104  run_experiment classify.cfg
+  105  vim classify.cfg 
+  106  run_experiment classify.cfg
+  107  less train/clean_data.csv 
+  108  sed -i 's/;/,/g' train/clean_data.csv 
+  109  sed -i 's/;/,/g' test/clean_data.csv 
+  110  run_experiment classify.cfg
+  111  ls output/
+  112  less output/red_wine_clean_data.csv_DecisionTreeClassifier.results
+  113  less output/red_wine_clean_data.csv_DecisionTreeClassifier.model 
+  114  less red_wine.log
+  115  less output/red_wine.log
+  116  less output/red_wine_summary.tsv 
+  117  less output/red_wine_clean_data.csv_DecisionTreeClassifier_predictions.tsv 
+  118  less output/red_wine_clean_data.csv_DecisionTreeClassifier.results.json
+  119  less output/red_wine_clean_data.csv_DecisionTreeClassifier.results
+  120  vim classify.cfg 
+  121  run_experiment classify.cfg
+  122  ls out
+  123  ls output/
+  124  less output/red_wine_clean_data.csv_DecisionTreeClassifier.results
+  125  less output/red_wine_clean_data.csv_RandomForestClassifier.results
+  126  ls
+  127  cd ..
+  128  ls
+  129  pwd
+  130  ls
+  131  mv bin.awk wine
+  132  cd wine
+  133  ls
+  134  pwd
+  135  echo ~
+  136  sudo apt-get install docker
+  137  sudo apt-get remove docker docker-engine docker.io containerd runc
+  138  sudo apt-get update
+  139  sudo apt-get install     ca-certificates     curl     gnupg
+  140  sudo install -m 0755 -d /etc/apt/keyrings
+  141  curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+  142  sudo chmod a+r /etc/apt/keyrings/docker.gpg
+  143  echo   "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
+  144    "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" |   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  145  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+  146  sudo docker run hello-world
+  147  sudo apt-get remove docker docker-engine docker.io containerd runc
+  148  ;s
+  149  ls
+  150  ls -la
+  151  vim Makefile
+  152  ls
+  153  mkdir makes
+  154  mv Makefile makes
+  155  ls
+  156  cd makes
+  157  make
+  158  ls
+  159  make top5
+  160  ls
+  161  cat numbers
+  162  cat top5 
+  163  cd ..
+  164  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+  165  sudo apt-get remove docker
+  166  sudo apt autoremove
+  167  ls
+  168  sudo apt-get update
+  169  sudo apt-get install ca-certificates
+  170  curl --version
+  171  sudo install -m 0755 -d /etc/apt/keyrings
+  172  curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+  173  sudo chmod a+r /etc/apt/keyrings/docker.gpg
+  174  echo   "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
+  175    "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" |   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  176  sudo apt-get update
+  177  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+  178  sudo docker run hello-world
+  179  sudo apt install w3m w3m-img
+  180  ls
+  181  cd makes
+  182  vim
+  183  ls
+  184  vim Makefile
+  185  ls
+  186  cd ..
+  187  ls
+  188  cd makes
+  189  ls
+  190  cd ..
+  191  cd makewine
+  192  mkdir makewine
+  193  ls
+  194  cd makewine
+  195  vim Makefile
+  196  ls
+  197  ls ../wine
+  198  cp ../wine/bin.awk .
+  199  cat bin.awk 
+  200  ls ../wine/test/
+  201  ls ../
+  202  ls ../../
+  203  cd ..
+  204  ;s
+  205  ls
+  206  cd a4
+  207  l
+  208  cat a4 
+  209  docker image
+  210  docker images
+  211  docker run busybox
+  212  sudo docker run busybox
+  213  docker ps
+  214  sudo docker ps
+  215  sudo docker run busybox echo "Hello"
+  216  sudo docker ps
+  217  sudo docker ps -a
+  218  sudo docker ps -l
+  219  mkdir docker
+  220  cd docker/
+  221  git clone https://github.com/prakhar1989/docker-curriculum.git
+  222  ls
+  223  ls docker-curriculum/
+  224  ls docker-curriculum/flask-app/templates/
+  225  cat docker-curriculum/flask-app/templates/index.html 
+  226  cd docker-curriculum/flask-app/templates/
+  227  ls
+  228  sudo docker build -t peizuli/catweb
+  229  sudo docker buildx build -t peizuli/catweb
+  230  sudo docker build -t peizuli/catweb .
+  231  ls
+  232  cd ..
+  233  sudo docker build -t peizuli/catweb .
+  234  sudo docker images
+  235  cat requirements.txt 
+  236  ls
+  237  vim Dockerfile 
+  238  vim app.py
+  239  ls
+  240  cat Dockerfile 
+  241  sudo docker images
+  242  sudo docker login
+  243  sudo docker push peizuli/catweb
+  244  git clone https://github.com/PeizuLi5/cs131
+  245  ls
+  246  history
+  247  cd ..
+  248  ls
+  249  cd peizuli1/
+  250  ls
+  251  mkdir cs131/temp
+  252  history > cs131/temp/cmds.log

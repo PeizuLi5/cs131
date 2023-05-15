@@ -1,0 +1,7 @@
+2023-04-26 21:35:19,955 - INFO - Task: evaluate
+2023-04-26 21:35:19,955 - INFO - Training on train, Test on test, feature set ['clean_data.csv'] ...
+2023-04-26 21:35:19,992 - INFO - Featurizing and training new RandomForestClassifier model
+2023-04-26 21:35:19,992 - WARNING - Training data will be shuffled to randomize grid search folds.  Shuffling may yield different results compared to scikit-learn.
+2023-04-26 21:35:48,296 - INFO - Best accuracy grid search score: 0.814
+2023-04-26 21:35:48,525 - INFO - Hyperparameters: bootstrap: True, ccp_alpha: 0.0, class_weight: None, criterion: gini, max_depth: None, max_features: sqrt, max_leaf_nodes: None, max_samples: None, min_impurity_decrease: 0.0, min_samples_leaf: 1, min_samples_split: 2, min_weight_fraction_leaf: 0.0, n_estimators: 500, n_jobs: None, oob_score: False, random_state: 123456789, verbose: 0, warm_start: False
+2023-04-26 21:35:48,525 - INFO - Evaluating predictions
